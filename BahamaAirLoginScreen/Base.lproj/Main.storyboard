@@ -3,8 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,30 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny" translatesAutoresizingMaskIntoConstraints="NO" id="B10-Iw-PMd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour" translatesAutoresizingMaskIntoConstraints="NO" id="8ta-f3-ltA">
+                                <rect key="frame" x="202" y="112" width="26" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8ta-f3-ltA" secondAttribute="height" multiplier="155:378" id="BiT-MQ-sc6"/>
+                                    <constraint firstAttribute="width" constant="26" id="g3L-UR-zSv"/>
+                                    <constraint firstAttribute="width" constant="38" id="pv4-ah-7WX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BiT-MQ-sc6"/>
+                                        <exclude reference="pv4-ah-7WX"/>
+                                    </mask>
+                                </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bahama Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xss-wE-y2z">
-                                <rect key="frame" x="100" y="70" width="215" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="minute" translatesAutoresizingMaskIntoConstraints="NO" id="SMy-yu-Xh4">
+                                <rect key="frame" x="245" y="82" width="15" height="81"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-EI-uBI">
+                                <rect key="frame" x="155" y="102" width="8" height="91"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="dyr-XL-asT">
+                                <rect key="frame" x="87" y="28" width="240" height="240"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xss-wE-y2z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="70" id="MV8-e6-eCi"/>
-                            <constraint firstAttribute="topMargin" secondItem="B10-Iw-PMd" secondAttribute="top" id="QYa-ca-ulF"/>
-                            <constraint firstItem="Xss-wE-y2z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="WWi-TJ-Rkr"/>
-                            <constraint firstItem="B10-Iw-PMd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tcU-Ka-57b"/>
-                            <constraint firstAttribute="trailing" secondItem="B10-Iw-PMd" secondAttribute="trailing" id="u7N-ib-bWy"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="B10-Iw-PMd" secondAttribute="bottom" id="xOG-OJ-fI7"/>
+                            <constraint firstItem="8ta-f3-ltA" firstAttribute="leading" secondItem="n8c-EI-uBI" secondAttribute="trailing" constant="39" id="2bd-La-BcM"/>
+                            <constraint firstItem="8ta-f3-ltA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="202" id="6NP-JE-a3C"/>
+                            <constraint firstItem="8ta-f3-ltA" firstAttribute="centerY" secondItem="dyr-XL-asT" secondAttribute="centerY" id="RUj-9c-KJl"/>
+                            <constraint firstItem="8ta-f3-ltA" firstAttribute="centerY" secondItem="n8c-EI-uBI" secondAttribute="centerY" id="Rbf-x4-33S"/>
+                            <constraint firstItem="8ta-f3-ltA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="fcv-1v-sIz"/>
+                            <constraint firstItem="SMy-yu-Xh4" firstAttribute="leading" secondItem="8ta-f3-ltA" secondAttribute="trailing" constant="17" id="iPX-U2-pmy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8ta-f3-ltA" secondAttribute="bottom" constant="552" id="okW-9t-Zjw"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RUj-9c-KJl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="loginLb" destination="Xss-wE-y2z" id="VT8-6M-PvJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,6 +66,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg-sunny" width="320" height="568"/>
+        <image name="clock" width="873" height="873"/>
+        <image name="hour" width="115" height="378"/>
+        <image name="minute" width="75" height="428"/>
+        <image name="second" width="30" height="409"/>
     </resources>
 </document>
